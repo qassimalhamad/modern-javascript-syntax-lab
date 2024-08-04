@@ -72,3 +72,80 @@ const userProfile = {
 }
 
 console.log(userProfile)
+
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+// Your code here
+console.log('--------------------------------------------------------------')
+
+function func(noun = 'cat' , adjective = 'white') {
+    return(console.log(`the ${noun} is ${adjective}`))
+}
+
+func()
+
+console.log('--------------------------------------------------------------')
+
+// Convert the following `if...else` statement in to a ternary:
+
+let pizza = 'tasty';
+
+if (pizza === 'tasty') {
+  console.log('yum');
+} else {
+  console.log('yuck');
+}
+
+// Your code here
+
+let tasty = pizza === 'tasty'? 'yum': 'yuck'
+
+console.log(tasty)
+
+console.log('--------------------------------------------------------------')
+
+// 1. SET LANGUAGE
+
+// Construct a single line of code that assigns a default value using the logical OR operator. This line should match the logic of the following statement: 
+
+// "LANG is equal to localLangConfig or the default value of English."
+
+const localLangConfig = null;  // Change to 'es', 'fr', etc., or keep it null
+
+// a. Create a variable called LANG
+// b. Assign LANG the value of localLangConfig or 'en' as a default
+
+// Your code here
+const LANG =  localLangConfig || 'en'
+// Log the result
+console.log('Language setting:', LANG);
+
+// 2. SET WEBSITE THEME
+
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// a. Create a variable called USER_THEME
+// b. Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+// Your code here
+
+const USER_THEME = userSavedTheme || 'light'
+
+// Log the result
+console.log('User theme setting:', USER_THEME);
+
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+    name: 'Alice',
+  };
+  
+  let cat = adventurer.cat?.name; // Your code here
+  
+  console.log(cat);
